@@ -34,7 +34,6 @@ def test(screen):
     # screen.clear()
     screen.print_at('BLACK', 7, 7, Screen.COLOUR_BLACK)
     screen.refresh()
-    sleep(1)
     
     screen.print_at('THAT WAS BLACK', 7, 7, Screen.COLOUR_MAGENTA)
     screen.refresh()
@@ -42,7 +41,27 @@ def test(screen):
     # screen.clear()
     screen.print_at('WHITE', 8, 8, Screen.COLOUR_WHITE)
     screen.refresh()
-    # screen.clear()
+    sleep(2)
+
+    screen.print_at('BOLD', 9, 9, Screen.COLOUR_WHITE, Screen.A_BOLD)
+    screen.refresh()
+    sleep(2)
+
+    screen.print_at('NORMAL', 10, 10, Screen.COLOUR_WHITE, Screen.A_NORMAL)
+    screen.refresh()
+    sleep(2)
+
+    screen.print_at('REVERSE', 11, 11, Screen.COLOUR_WHITE, Screen.A_REVERSE)
+    screen.refresh()
+    sleep(2)
+
+    screen.print_at('Underline', 12, 12, Screen.COLOUR_WHITE, Screen.A_UNDERLINE)
+    screen.refresh()
+    sleep(2)
+
+    screen.print_at(u'☠️🧟☔︎ Testing out unicode output', 13, 13)
+    screen.refresh()
+
     sleep(10)
     screen.clear()
 
